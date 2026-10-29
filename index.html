@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROGUE — одежда для твоего стиля</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">ROGUE</a>
+
+        <nav>
+            <a href="#catalog">Каталог</a>
+            <a href="#about">О нас</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+
+        <button class="cart-button" id="cart-button" type="button">
+            Корзина (<span id="cart-count">0</span>)
+        </button>
+
+        <a href="#catalog" class="header-button">Смотреть коллекцию</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">NEW SEASON — 2026</p>
+                <h1>Your style.<br>Your rules.</h1>
+                <p class="hero-text">
+                    Одежда для тех, кто не боится быть собой.
+                </p>
+                <a href="#catalog" class="main-button">
+                    Исследовать коллекцию ↗
+                </a>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=85"
+                    alt="Модель в современном fashion-образе"
+                >
+                <span>ROGUE / NEW DROP</span>
+            </div>
+
+            <div class="cart-panel" id="cart-panel" hidden>
+                <div class="cart-header">
+                    <h2>Твоя корзина</h2>
+                    <button id="close-cart" type="button">✕</button>
+                </div>
+
+                <div id="cart-items">
+                    <p>Корзина пока пуста 🤍</p>
+                </div>
+
+                <div class="cart-total">
+                    Итого: <strong id="cart-total">0 ₽</strong>
+                </div>
+
+                <button
+                    id="checkout-button"
+                    class="checkout-button"
+                    type="button"
+                >
+                    Оформить заказ →
+                </button>
+
+                <button id="clear-cart" type="button">
+                    Очистить корзину
+                </button>
+
+                <form id="checkout-form" class="checkout-form" hidden>
+                    <h3>Оформление заказа</h3>
+                    <p>Заполни данные для демонстрации заказа.</p>
+
+                    <label for="customer-name">Твоё имя</label>
+                    <input
+                        type="text"
+                        id="customer-name"
+                        placeholder="Например, Анна"
+                        required
+                    >
+
+                    <label for="customer-phone">Телефон</label>
+                    <input
+                        type="tel"
+                        id="customer-phone"
+                        placeholder="+7 900 000-00-00"
+                        required
+                    >
+
+                    <label for="customer-address">Адрес доставки</label>
+                    <input
+                        type="text"
+                        id="customer-address"
+                        placeholder="Город, улица, дом"
+                        required
+                    >
+
+                    <button type="submit" class="checkout-button">
+                        Подтвердить заказ
+                    </button>
+
+                    <p id="order-message" role="status"></p>
+                </form>
+            </div>
+        </section>
+
+        <section id="catalog" class="catalog">
+            <p class="eyebrow">SELECTED FOR YOU</p>
+            <h2>Новая коллекция</h2>
+            <p>База на каждый день и акценты для твоего образа.</p>
+
+            <div class="catalog-filters">
+                <button class="filter-button active" data-filter="all" type="button">
+                    Все товары
+                </button>
+                <button class="filter-button" data-filter="tops" type="button">
+                    Верх
+                </button>
+                <button class="filter-button" data-filter="bottoms" type="button">
+                    Низ
+                </button>
+                <button class="filter-button" data-filter="outerwear" type="button">
+                    Верхняя одежда
+                </button>
+            </div>
+
+            <div class="products">
+                <article class="product" data-category="tops">
+                    <a href="product.html?item=tee" class="product-link">
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80"
+                                alt="Oversized T-shirt"
+                            >
+                        </div>
+                    </a>
+
+                    <h3>
+                        <a href="product.html?item=tee" class="product-link">
+                            Oversized T-shirt
+                        </a>
+                    </h3>
+                    <p>Футболка классическая</p>
+                    <span>2 499 ₽</span>
+
+                    <button class="add-to-cart" data-name="Oversized T-shirt" type="button">
+                        Добавить в корзину +
+                    </button>
+                </article>
+
+                <article class="product" data-category="tops">
+                    <a href="product.html?item=hoodie" class="product-link">
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=700&q=80"
+                                alt="Everyday Hoodie"
+                            >
+                        </div>
+                    </a>
+
+                    <h3>
+                        <a href="product.html?item=hoodie" class="product-link">
+                            Hoodie
+                        </a>
+                    </h3>
+                    <p>Худи</p>
+                    <span>4 999 ₽</span>
+
+                    <button class="add-to-cart" data-name="Everyday Hoodie" type="button">
+                        Добавить в корзину +
+                    </button>
+                </article>
+
+                <article class="product" data-category="bottoms">
+                    <a href="product.html?item=jeans" class="product-link">
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=80"
+                                alt="Baggy Jeans"
+                            >
+                        </div>
+                    </a>
+
+                    <h3>
+                        <a href="product.html?item=jeans" class="product-link">
+                            Baggy jeans
+                        </a>
+                    </h3>
+                    <p>Джинсы бегги</p>
+                    <span>5 499 ₽</span>
+
+                    <button class="add-to-cart" data-name="Baggy Jeans" type="button">
+                        Добавить в корзину +
+                    </button>
+                </article>
+
+                <article class="product" data-category="outerwear">
+                    <a href="product.html?item=jacket" class="product-link">
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=80"
+                                alt="Leather Jacket"
+                            >
+                        </div>
+                    </a>
+
+                    <h3>
+                        <a href="product.html?item=jacket" class="product-link">
+                            Leather jacket
+                        </a>
+                    </h3>
+                    <p>Кожаная куртка</p>
+                    <span>7 999 ₽</span>
+
+                    <button class="add-to-cart" data-name="Leather Jacket" type="button">
+                        Добавить в корзину +
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <p class="eyebrow">ABOUT ROGUE</p>
+            <h2>Меньше правил.<br>Больше тебя.</h2>
+            <p>
+                ROGUE — пространство стиля, где база встречается
+                с актуальными трендами.
+            </p>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <a href="#" class="logo">ROGUE</a>
+        <p>Your style is your story.</p>
+        <p>Учебный проект · 2026</p>
+        <p>Доставка: информация уточняется</p>
+        <p>Контакты: демонстрационный проект</p>
+    </footer>
+    <div id="rogue-toast" class="rogue-toast" role="status" aria-live="polite">
+        <span class="rogue-toast-mark">R</span>
+        <div class="rogue-toast-content">
+            <strong id="rogue-toast-title">ROGUE</strong>
+            <p id="rogue-toast-text">Товар добавлен в корзину</p>
+        </div>
+        <button id="rogue-toast-close" type="button" aria-label="Закрыть уведомление">×</button>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="product.js"></script>
+</body>
+</html>
+
+
